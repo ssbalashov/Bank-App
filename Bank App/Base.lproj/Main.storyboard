@@ -107,6 +107,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Loan" image="creditcard.circle.fill" catalog="system" id="qpJ-zS-4UL"/>
                     <connections>
+                        <outlet property="monthlyPaymentLabel" destination="gVx-fk-Hqw" id="lXR-Ah-fDM"/>
                         <outlet property="nperTextField" destination="wxG-j2-GQv" id="LV4-n0-h0C"/>
                         <outlet property="pvTextField" destination="DDR-tP-jHZ" id="Mcz-T6-jSs"/>
                         <outlet property="rateTextField" destination="kw3-Xy-vle" id="vak-UX-iQL"/>
