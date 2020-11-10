@@ -50,7 +50,7 @@
         <!--Loan-->
         <scene sceneID="fRQ-Zy-hID">
             <objects>
-                <viewController id="3lx-P6-8f4" sceneMemberID="viewController">
+                <viewController id="3lx-P6-8f4" customClass="ViewController" customModule="Bank_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a64-d4-Z5p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,16 +62,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="3lx-P6-8f4" eventType="editingChanged" id="8l9-Hw-tfq"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок в мес." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxG-j2-GQv">
                                         <rect key="frame" x="0.0" y="73" width="314" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="3lx-P6-8f4" eventType="editingChanged" id="tjZ-tn-ttw"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Годовая ставка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kw3-Xy-vle">
                                         <rect key="frame" x="0.0" y="146" width="314" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="3lx-P6-8f4" eventType="editingChanged" id="FVh-xM-C3R"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ежемесячный платеж" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8i-o4-VYU">
                                         <rect key="frame" x="0.0" y="219" width="314" height="36"/>
@@ -97,6 +106,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Loan" image="creditcard.circle.fill" catalog="system" id="qpJ-zS-4UL"/>
+                    <connections>
+                        <outlet property="nperTextField" destination="wxG-j2-GQv" id="LV4-n0-h0C"/>
+                        <outlet property="pvTextField" destination="DDR-tP-jHZ" id="Mcz-T6-jSs"/>
+                        <outlet property="rateTextField" destination="kw3-Xy-vle" id="vak-UX-iQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgl-bE-JHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
